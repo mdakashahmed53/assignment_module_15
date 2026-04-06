@@ -35,7 +35,7 @@ class ProfileScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: 70,
                             backgroundImage: NetworkImage(
-                              'https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg',
+                              'https://media.licdn.com/dms/image/v2/D4D03AQFvwSL9TeVHVA/profile-displayphoto-scale_200_200/B4DZiiOC4GGgAc-/0/1755068250704?e=2147483647&v=beta&t=CwZzl7bG0j-wFxX0m4C4TpT4enC29-UIIlLFA5zZEuk',
                             ),
                           ),
                           SizedBox(height: 8),
@@ -157,7 +157,7 @@ class ProfileScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SizedBox(width: 180, child: Divider(thickness: 2)),
+                    SizedBox(width: 130, child: Divider(thickness: 2)),
                     SizedBox(width: 9),
                     Text(
                       'Interests',
@@ -167,54 +167,151 @@ class ProfileScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(width: 9),
-                    SizedBox(width: 180, child: Divider(thickness: 2)),
+                    SizedBox(width: 130, child: Divider(thickness: 2)),
                   ],
                 ),
 
+                SizedBox(height: 10),
+
                 // Card Section
-                Container(
-                  height: 200,
-                  width: 200,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Image.network(
-                        'https://live.staticflickr.com/1482/24161322546_4b26a2fa98_h.jpg',
-                        height: 100,
-                        width: 200,
-                        fit: BoxFit.cover,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Card(
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadiusGeometry.circular(10),
                       ),
-                      SizedBox(
-                        width: double.infinity,
-                        child: Text(
-                          'Travel',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700,
+                      child: Container(
+                        height: 190,
+                        width: 180,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadiusGeometry.vertical(
+                                  top: Radius.circular(10),
+                                ),
+                                child: Image.network(
+                                  'https://live.staticflickr.com/1482/24161322546_4b26a2fa98_h.jpg',
+                                  height: 80,
+                                  width: double.infinity,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              SizedBox(
+                                width: double.infinity,
+                                child: Text(
+                                  'Travel',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: double.infinity,
+                                child: Text(
+                                  'Exploring new place around the word',
+                                  style: TextStyle(fontSize: 10),
+                                ),
+                              ),
+                              SizedBox(height: 5),
+                              SizedBox(
+                                width: double.infinity,
+                                height: 30,
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.grey.shade300,
+                                    foregroundColor: Colors.blue,
+                                  ),
+                                  onPressed: () {},
+                                  child: Text(
+                                    'View More',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
-                      SizedBox(
-                        width: double.infinity,
-                        child: Text(
-                          'Exploring new place around the word',
-                          style: TextStyle(fontSize: 12),
-                        ),
+                    ),
+
+                    SizedBox(width: 5),
+
+                    // Photography card
+                    Card(
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadiusGeometry.circular(10),
                       ),
-                      SizedBox(height: 5),
-                      SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.grey.shade300,
+                      child: Container(
+                        height: 190,
+                        width: 180,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadiusGeometry.vertical(
+                                  top: Radius.circular(10),
+                                ),
+                                child: Image.network(
+                                  'https://images.shiksha.com/mediadata/images/articles/1568193656phpmWI2xq.jpeg',
+                                  height: 80,
+                                  width: double.infinity,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              SizedBox(
+                                width: double.infinity,
+                                child: Text(
+                                  'Photography',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: double.infinity,
+                                child: Text(
+                                  'Capturing moments through the lens',
+                                  style: TextStyle(fontSize: 12),
+                                ),
+                              ),
+                              SizedBox(height: 5),
+                              SizedBox(
+                                width: double.infinity,
+                                height: 30,
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.grey.shade300,
+                                    foregroundColor: Colors.blue,
+                                  ),
+                                  onPressed: () {},
+                                  child: Text(
+                                    'View More',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                          onPressed: () {},
-                          child: Text('View More'),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ],
             ),
